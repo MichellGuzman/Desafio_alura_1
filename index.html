@@ -13,22 +13,28 @@
         <img class="logo" src="imagenes/Logo.png" alt="Logo de alura">
     </header>
     <main class="formulario__encriptador">
-        <section>
-            <textarea class="textarea" id="ingresoTexto" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+        <div>
+            <textarea class="textarea" id="ingresoTexto" cols="30" rows="10"
+                placeholder="Ingrese el texto aqui"></textarea>
             <div>
                 <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
             </div>
             <div class="botones">
                 <button class="boton_encriptar" id="botonEncriptar" onclick='encriptar();'>Encriptar</button>
-                <button class="boton_desencriptar" id="botonDesencriptar" onclick='desencriptar();'>Desencriptar</button>
+                <button class="boton_desencriptar" id="botonDesencriptar"
+                    onclick='desencriptar();'>Desencriptar</button>
             </div>
-        </section>
-        <section>
-            <textarea class="mensaje" name="salidaTexto" id="salidaTexto" cols="20" rows="10" placeholder="Ningún mensaje fue encontrado" readonly></textarea>
-            <div>
-                <button onclick='copiar();' class="copiar" id="botonCopiar">Copiar</button>
+        </div>
+        <div class="encriptado">
+            <img src="" alt="" id="muneco">
+            <div class="mensaje_encriptado">
+                <textarea class="mensaje" name="salidaTexto" id="salidaTexto" cols="20" rows="10"
+                    placeholder="Ningún mensaje fue encontrado" readonly></textarea>
+                <div>
+                    <button onclick='copiar();' class="copiar" id="botonCopiar">Copiar</button>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <script src="app.js"></script>
