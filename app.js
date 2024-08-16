@@ -41,3 +41,4 @@ function copiar() {
     textoSalida.select();
     document.execCommand('copy');
 }
+desencriptar();

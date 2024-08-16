@@ -47,7 +47,18 @@ main {
     opacity: 0.8;
 }
 
-.botones{
+button {
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    border-radius: 24px;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.botones {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -58,43 +69,38 @@ main {
     top: 82%;
 }
 
-.boton_encriptar{
+.boton_encriptar {
     align-items: center;
-    justify-content: center;
-    padding: 2%;
-    gap: 8px;
-    width: 25%;
     background-color: #0a3871;
-    border-radius: 24px;
-    font-size: 18px;
-    line-height: 19px;
-    text-align: center;
     color: white;
 }
 
-.boton_desencriptar{
+.boton_desencriptar {
     box-sizing: border-box;
-    justify-content: center;
-    padding: 2%;
-    gap: 8px;
-    width: 25%;
     background: #d8dfe8;
     border: 1px solid #0a3871;
-    border-radius: 24px;
-    font-size: 18px;
-    line-height: 19px;
-    text-align: center;
     color: #0a3871;
 }
 
-.boton_encriptar:hover,.boton_desencriptar:hover{
+.copiar {
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    color: #0a3871;
+    cursor: pointer;
+    margin-left: -50%;
+    position: absolute;
+    width: 100%;
+}
+
+.boton_encriptar:hover,
+.boton_desencriptar:hover {
     cursor: pointer;
     margin: 0.3%;
     width: 24.5%;
     padding: 1.8%;
 }
 
-.encriptado{
+.encriptado {
     display: flex;
     justify-content: center;
     position: absolute;
@@ -107,7 +113,8 @@ main {
     border-radius: 32px;
 }
 
-.mensaje_encriptado{
+.mensaje_encriptado {
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,11 +122,99 @@ main {
     padding: 1%;
     gap: 16px;
     position: absolute;
-    width: 100%;
-    top: 65%;
+    width: 90%;
     text-align: center;
+    border-radius: 24px;
 }
 
+.mensaje {
+    background-color: white;
+    resize: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    background-image: url(../imagenes/Muñeco.png);
+    background-size: 80% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+    main {
+        height: auto;
+    }
+
+    .textarea,
+    .informacion,
+    .botones,
+    .encriptado {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+        margin-left: 10%;
+    }
+
+    .textarea {
+        width: 90%;
+        border-radius: 24px;
+    }
+
+    .informacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .botones {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .botones button {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        font-size: 16px;
+    }
+
+    .encriptado {
+        width: 90%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .mensaje_encriptado {
+        position: static;
+        width: 80%;
+    }
+
+    .mensaje {
+        background-size: 60% auto;
+        background-image: none;
+        height: 80%;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        height: auto;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .botones button {
+        width: 80%;
+        font-size: 16px;
+    }
+}
 /*
 
 *{
